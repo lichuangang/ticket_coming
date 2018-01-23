@@ -8,7 +8,7 @@ public class ApiResultFactory {
     }
 
     public static <T> ApiResult Create(T data) {
-        ApiResult result = new ApiResult();
+        ApiResult result = new ApiResult<T>();
         result.setData(data);
         return result;
     }
