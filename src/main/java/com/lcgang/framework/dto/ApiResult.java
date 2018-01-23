@@ -7,10 +7,10 @@ import java.util.Date;
 
 public class ApiResult<T> {
 
-    private int code=200;
-    private String msg=null;
-    private Date time=new Date();
-    private T data=null;
+    private int code = 200;
+    private String msg = null;
+    private Date time = new Date();
+    private T data = null;
 
     public int getCode() {
         return code;

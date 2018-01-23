@@ -7,27 +7,25 @@ import java.io.IOException;
 
 public class JsonHelper {
 
-    private static ObjectMapper objectMapper = new  ObjectMapper();
+    private static ObjectMapper objectMapper = new ObjectMapper();
 
-    public static String toString(Object object)
-    {
+    public static String toString(Object object) {
         String resultStr = null;
         try {
             resultStr = objectMapper.writeValueAsString(object);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return  resultStr;
+        return resultStr;
     }
 
-    public static <T> T toObject(String json,Class<T> tClass)
-    {
+    public static <T> T toObject(String json, Class<T> tClass) {
         T object = null;
         try {
             object = objectMapper.readValue(json, tClass);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return  object;
+        return object;
     }
 }

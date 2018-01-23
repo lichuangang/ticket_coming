@@ -4,8 +4,7 @@ import com.fcibook.quick.http.QuickHttp;
 import com.lcgang.framework.dto.wx.LoginUser;
 
 public class WexinHelper {
-    public static LoginUser Get(String code,String appId,String appSecret)
-    {
+    public static LoginUser Get(String code, String appId, String appSecret) {
         String res = new QuickHttp()
                 .url("https://api.weixin.qq.com/sns/jscode2session")
                 .get()
@@ -14,6 +13,6 @@ public class WexinHelper {
                 .addParame("js_code", code)
                 .addParame("grant_type", "authorization_code")
                 .text();
-        return JsonHelper.toObject(res,LoginUser.class);
+        return JsonHelper.toObject(res, LoginUser.class);
     }
 }
