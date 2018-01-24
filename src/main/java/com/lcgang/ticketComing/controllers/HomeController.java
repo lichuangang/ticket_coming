@@ -8,6 +8,6 @@ public class HomeController {
 
     @RequestMapping("/hello")
     public String hello() {
-        return "hello";
+        return "version:1.0.0.1";
     }
 }
