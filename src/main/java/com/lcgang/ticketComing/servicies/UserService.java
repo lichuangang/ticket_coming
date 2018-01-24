@@ -25,12 +25,23 @@ public class UserService {
 
     public void setUserLocation(SetLocationParam param) {
         Users u = usersMapper.selectByPrimaryKey(param.getOpenId());
-        u.setLatitude(param.getLatitude());
-        u.setLongitude(param.getLongitude());
-        //todo:生成geohash
-        u.setGeohash("xxxxxx");
-        u.setUpdateTime(new Date());
-        usersMapper.updateByPrimaryKey(u);
+        if (u == null) {
+            u=new Users();
+            u.setOpenid(param.getOpenId());
+            u.setLatitude(param.getLatitude());
+            u.setLongitude(param.getLongitude());
+            u.setGeohash("xxxxxx");
+            u.setCreateTime(new Date());
+            u.setUpdateTime(new Date());
+            usersMapper.insert(u);
+        } else {
+            u.setLatitude(param.getLatitude());
+            u.setLongitude(param.getLongitude());
+            //todo:生成geohash
+            u.setGeohash("xxxxxx");
+            u.setUpdateTime(new Date());
+            usersMapper.updateByPrimaryKey(u);
+        }
     }
 
     public Coordinate getCoordinate(String openId) {

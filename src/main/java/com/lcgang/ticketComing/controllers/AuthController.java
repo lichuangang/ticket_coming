@@ -8,6 +8,7 @@ import com.lcgang.ticketComing.dtos.auth.SetLocationParam;
 import com.lcgang.ticketComing.servicies.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,7 +39,7 @@ public class AuthController {
     }
 
     @RequestMapping(value = "/setLocation", method = RequestMethod.POST)
-    public ApiResult setLocation(SetLocationParam param) {
+    public ApiResult setLocation(@RequestBody SetLocationParam param) {
 
         userService.setUserLocation(param);
         return ApiResultFactory.Create();
