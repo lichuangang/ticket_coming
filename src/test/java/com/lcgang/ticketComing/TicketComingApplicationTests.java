@@ -1,6 +1,5 @@
 package com.lcgang.ticketComing;
 
-import com.lcgang.ticketComing.servicie.UserService;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +7,8 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.lcgang.ticketComing.servicies.UserService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
