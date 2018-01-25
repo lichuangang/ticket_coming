@@ -1,7 +1,8 @@
 package com.lcgang.ticketComing;
 
 import com.lcgang.ticketComing.dtos.auth.SetLocationParam;
-import com.lcgang.ticketComing.servicies.UserService;
+import com.lcgang.ticketComing.servicie.UserService;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;

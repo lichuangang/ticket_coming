@@ -1,4 +1,4 @@
-package com.lcgang.ticketComing.servicies;
+package com.lcgang.ticketComing.servicie;
 
 import com.lcgang.framework.dto.wx.Coordinate;
 import com.lcgang.ticketComing.dtos.auth.SetLocationParam;
