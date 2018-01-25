@@ -1,6 +1,5 @@
 package com.lcgang.ticketComing;
 
-import com.lcgang.ticketComing.dtos.auth.SetLocationParam;
 import com.lcgang.ticketComing.servicie.UserService;
 
 import org.junit.Test;
@@ -20,7 +19,7 @@ public class TicketComingApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		//userService.test();
+		userService.test();
 	}
 
 	@Test

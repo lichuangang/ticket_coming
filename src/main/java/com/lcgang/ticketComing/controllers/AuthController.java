@@ -5,7 +5,7 @@ import com.lcgang.framework.dto.ApiResult;
 import com.lcgang.framework.dto.wx.LoginUser;
 import com.lcgang.framework.utils.ApiResultFactory;
 import com.lcgang.ticketComing.dtos.auth.SetLocationParam;
-import com.lcgang.ticketComing.servicie.UserService;
+import com.lcgang.ticketComing.servicies.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,4 +1,4 @@
-package com.lcgang.ticketComing.servicie.impl;
+package com.lcgang.ticketComing.servicies;
 
 import java.util.Date;
 
@@ -9,15 +9,13 @@ import com.lcgang.framework.dto.wx.Coordinate;
 import com.lcgang.ticketComing.dtos.auth.SetLocationParam;
 import com.lcgang.ticketComing.mapper.UsersMapper;
 import com.lcgang.ticketComing.models.Users;
-import com.lcgang.ticketComing.servicie.UserService;
 
 @Service("userService")
-public class UserServiceImpl implements UserService{
+public class UserService {
 
     @Autowired
     private UsersMapper usersMapper;
 
-    @Override
     public void test() {
         Users u = new Users();
         u.setCreateTime(new Date());
@@ -26,7 +24,6 @@ public class UserServiceImpl implements UserService{
         usersMapper.insert(u);
     }
 
-    @Override
     public void setUserLocation(SetLocationParam param) {
         Users u = usersMapper.selectByPrimaryKey(param.getOpenId());
         if (u == null) {
@@ -48,7 +45,6 @@ public class UserServiceImpl implements UserService{
         }
     }
 
-    @Override
     public Coordinate getCoordinate(String openId) {
         Users u = usersMapper.selectByPrimaryKey(openId);
         if (u == null) {
