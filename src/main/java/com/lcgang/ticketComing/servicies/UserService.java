@@ -1,15 +1,16 @@
 package com.lcgang.ticketComing.servicies;
 
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.lcgang.framework.dto.wx.Coordinate;
 import com.lcgang.ticketComing.dtos.auth.SetLocationParam;
 import com.lcgang.ticketComing.mapper.UsersMapper;
 import com.lcgang.ticketComing.models.Users;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.util.Date;
-
-@Service
+@Service("userService")
 public class UserService {
 
     @Autowired
